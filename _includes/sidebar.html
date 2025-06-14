@@ -22,7 +22,7 @@
       <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %}">
         <a href="{{ '/' | relative_url }}" class="nav-link">
           <i class="fa-fw fas fa-home"></i>
-          <span>{{ site.data.locales[include.lang].tabs.home | upcase }}</span>
+          <span>{{ site.data.locales[include.lang].tabs.home | default: "首頁" }}</span>
         </a>
       </li>
       <!-- the real tabs -->
@@ -30,13 +30,61 @@
         <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
           <a href="{{ tab.url | relative_url }}" class="nav-link">
             <i class="fa-fw {{ tab.icon }}"></i>
-            {% capture tab_name %}{{ tab.url | split: '/' }}{% endcapture %}
+            {% capture tab_name %}{{ tab.url | split: '/' | last }}{% endcapture %}
 
-            <span>{{ site.data.locales[include.lang].tabs.[tab_name] | default: tab.title | upcase }}</span>
+            <span>{{ site.data.locales[include.lang].tabs[tab_name] | default: tab.title }}</span>
           </a>
         </li>
         <!-- .nav-item -->
       {% endfor %}
+
+      <!-- Language Switcher -->
+      <li class="nav-item language-switcher-item mt-3">
+        <div class="language-switcher">
+          <div class="dropdown">
+            <button class="btn btn-secondary btn-sm dropdown-toggle w-100 d-flex align-items-center justify-content-between"
+                    type="button"
+                    id="languageDropdown"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false">
+              <span>
+                {% if site.active_lang == 'zh-tw' %}
+                  繁體中文
+                {% elsif site.active_lang == 'en' %}
+                  English
+                {% else %}
+                  {{ site.active_lang | upcase }}
+                {% endif %}
+              </span>
+            </button>
+            <ul class="dropdown-menu w-100" aria-labelledby="languageDropdown">
+              {% for lang in site.languages %}
+                {% unless lang == site.active_lang %}
+                  <li>
+                    {% if lang == 'zh-tw' %}
+                      <a class="dropdown-item" href="{{ site.baseurl }}/" data-lang="zh-tw">
+                        繁體中文
+                      </a>
+                    {% elsif lang == 'en' %}
+                      <a class="dropdown-item" href="{{ site.baseurl }}/en/" data-lang="en">
+                        English
+                      </a>
+                    {% else %}
+                      <a class="dropdown-item" href="{{ site.baseurl }}/{{ lang }}/" data-lang="{{ lang }}">
+                        {{ lang | upcase }}
+                      </a>
+                    {% endif %}
+                  </li>
+                {% endunless %}
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </li>
+            </ul>
+          </div>
+        </div>
+      </li>
     </ul>
   </nav>
 

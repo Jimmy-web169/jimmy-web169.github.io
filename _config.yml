@@ -6,40 +6,51 @@ theme: jekyll-theme-chirpy
 # The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
 # If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
 # otherwise, the layout language will use the default value of 'en'.
-lang: en
+lang: zh-TW
+
+# Jekyll-Polyglot 多語言設定
+languages: ["zh-tw", "en"]
+default_lang: "zh-tw"
+exclude_from_localization: ["javascript", "images", "css", "public", "sitemap", "robots.txt"]
+parallel_localization: false
+lang_from_path: true
 
 # Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
-timezone:
+timezone: Asia/Taipei
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Chirpy # the main title
+title: Let's Open Terminal # the main title
 
-tagline: A text-focused Jekyll theme # it will display as the subtitle
+tagline: Build. Learn. Iterate # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
+    Let's Open Terminal is a developer-focused blog that shares technical insights, coding experiments,
+    and learning journeys. Built for curious minds who love to build, learn, and iterate in public.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: ""
+url: "https://www.lets-open-terminal.com"
 
-github:
-  username: github_username # change to your GitHub username
+# GitHub Pages environment
+environment: production
 
-twitter:
-  username: twitter_username # change to your Twitter username
+#github:
+#  username: github_username # change to your GitHub username
+
+#twitter:
+#  username: twitter_username # change to your Twitter username
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: your_full_name
-  email: example@domain.com # change to your email address
-  links:
+  name: Let's Open Terminal
+  #email: example@domain.com # change to your email address
+  #links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your Twitter homepage
-    - https://github.com/username # change to your GitHub homepage
+    #- https://twitter.com/username # change to your Twitter homepage
+    #- https://github.com/username # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
@@ -53,13 +64,14 @@ webmaster_verifications:
   baidu: # fill in your Baidu verification code
   facebook: # fill in your Facebook verification code
 
+locale: zh_TW
 # ↑ --------------------------
 # The end of `jekyll-seo-tag` settings
 
 # Web Analytics Settings
 analytics:
   google:
-    id: # fill in your Google Analytics ID
+    id: G-FY2GLL103K
   goatcounter:
     id: # fill in your GoatCounter ID
   umami:
@@ -96,20 +108,20 @@ theme_mode: # [light | dark]
 #
 # e.g. 'https://cdn.com'
 cdn:
+  https://static.lets-open-terminal.com
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
-
+avatar: https://static.lets-open-terminal.com/img/posts/cute_terminal.png
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
-social_preview_image: # string, local or CORS resources
+social_preview_image: https://static.lets-open-terminal.com/img/posts/cute_terminal.png # string, local or CORS resources
 
 # boolean type, the global switch for TOC in posts.
 toc: true
 
 comments:
   # Global switch for the post-comment system. Keeping it empty means disabled.
-  provider: # [disqus | utterances | giscus]
+  provider: giscus # [disqus | utterances | giscus]
   # The provider options are as follows:
   disqus:
     shortname: # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
@@ -119,15 +131,15 @@ comments:
     issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo: # <gh-username>/<repo>
-    repo_id:
-    category:
-    category_id:
-    mapping: # optional, default to 'pathname'
-    strict: # optional, default to '0'
-    input_position: # optional, default to 'bottom'
-    lang: # optional, default to the value of `site.lang`
-    reactions_enabled: # optional, default to the value of `1`
+    repo: Jimmy-web169/jimmy-web169.github.io
+    repo_id: R_kgDOO7dYtw
+    category: Blog Comments
+    category_id: DIC_kwDOO7dYt84CrkpA
+    mapping: pathname # optional, default to 'pathname'
+    strict: '0' # optional, default to '0'
+    input_position: bottom # optional, default to 'bottom'
+    lang: en # optional, default to the value of `site.lang`
+    reactions_enabled: '1' # optional, default to the value of '1'
 
 # Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
 assets:
@@ -146,6 +158,12 @@ pwa:
     # shares the same domain name as the current website.
     deny_paths:
       # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
+
+# RSS Feed settings
+feed:
+  posts_limit: 20
+  excerpt_only: false
+  path: feed.xml
 
 paginate: 10
 
@@ -206,15 +224,17 @@ compress_html:
     envs: [development]
 
 exclude:
-  - "*.gem"
-  - "*.gemspec"
   - docs
   - tools
   - README.md
   - LICENSE
   - purgecss.js
-  - "*.config.js"
-  - "package*.json"
+
+plugins:
+  - jekyll-polyglot
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 jekyll-archives:
   enabled: [categories, tags]

@@ -13,7 +13,6 @@ _site
 
 # NPM dependencies
 node_modules
-package-lock.json
 
 # IDE configurations
 .idea
@@ -23,3 +22,10 @@ package-lock.json
 !.vscode/tasks.json
 
 # Misc
+assets/img/posts/
+
+upload_to_r2.sh
+convert_to_webp_and_upload_to_r2.sh
+convert_to_webp.sh
+
+.cursor/
