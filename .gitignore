@@ -25,3 +25,7 @@ node_modules
 assets/img/posts/
 
 upload_to_r2.sh
+convert_to_webp_and_upload_to_r2.sh
+convert_to_webp.sh
+
+.cursor/
