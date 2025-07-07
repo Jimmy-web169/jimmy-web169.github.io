@@ -6,6 +6,6 @@ lang: en
 page_id: categories
 author: Jimmy
 image:
-  path: /img/posts/cute_terminal.webp
+  path: /img/posts/cute_terminal.png
 description: Browse all articles by topic categories to quickly find the areas you're interested in.
 ---

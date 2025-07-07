@@ -6,7 +6,7 @@ lang: zh-tw
 page_id: about
 author: Jimmy
 image:
-  path: /img/posts/cute_terminal.webp
+  path: /img/posts/cute_terminal.png
 description: 了解我的技術背景、學習歷程，以及對軟體開發的想法。
 ---
 ## 關於作者

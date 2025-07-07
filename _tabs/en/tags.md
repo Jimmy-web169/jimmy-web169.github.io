@@ -6,6 +6,6 @@ lang: en
 page_id: tags
 author: Jimmy
 image:
-  path: /img/posts/cute_terminal.webp
+  path: /img/posts/cute_terminal.png
 description: Quickly find related articles and topics through tags.
 ---

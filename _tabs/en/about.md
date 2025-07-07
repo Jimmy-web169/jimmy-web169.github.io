@@ -6,7 +6,7 @@ lang: en
 page_id: about
 author: Jimmy
 image:
-  path: /img/posts/cute_terminal.webp
+  path: /img/posts/cute_terminal.png
 description: Learn about My background, learning journey, and thoughts on software development.
 ---
 ## About the Author
