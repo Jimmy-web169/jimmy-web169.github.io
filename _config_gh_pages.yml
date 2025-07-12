@@ -2,7 +2,7 @@
 # This file overrides _config.yml settings for GitHub Pages deployment
 
 # For GitHub User Pages (username.github.io repository)
-url: "https://jimmy-web169.github.io"
+url: "https://www.lets-open-terminal.com"
 baseurl: ""
 
 # GitHub Pages environment
