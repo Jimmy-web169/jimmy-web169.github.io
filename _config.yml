@@ -105,7 +105,7 @@ theme_mode: # [light | dark]
 #
 # e.g. 'https://cdn.com'
 cdn:
-  https://lets-open-terminal.com
+  https://static.lets-open-terminal.com
 
 # the avatar on sidebar, support local or CORS resources
 avatar: https://lets-open-terminal.com/img/posts/cute_terminal.png
