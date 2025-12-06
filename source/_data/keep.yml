@@ -257,9 +257,9 @@ comment:
   # Please generate your configuration items in https://giscus.app
   giscus:
     repo: Jimmy-web169/jimmy-web169.github.io
-    repo_id: R_kgDOO7dYtw
+    repo_id: R_kgDOQjvURg
     category: Announcements    # Recommend use Announcements
-    category_id: DIC_kwDOO7dYt84CrkpA
+    category_id: DIC_kwDOQjvURs4CzeMt
     reactions_enabled: true   # Option values: true | false
 
   # Artalk
