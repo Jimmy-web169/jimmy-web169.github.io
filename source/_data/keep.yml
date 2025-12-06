@@ -328,6 +328,14 @@ footer:
 
 
 # ---------------------------------------------------------------------------------------
+# Docs: https://keep-docs.xpoet.cn/basis/configuration-guide/google_analytics.html
+# ---------------------------------------------------------------------------------------
+google_analytics:
+  enable: true           # Option values: true | false
+  tracking_id: G-FY2GLL103K  # Your Google Analytics tracking ID
+
+
+# ---------------------------------------------------------------------------------------
 # Docs: https://keep-docs.xpoet.cn/basis/configuration-guide/inject.html
 # ---------------------------------------------------------------------------------------
 inject:
@@ -339,7 +347,6 @@ inject:
       # - /css/custom-2.css
     # - ...
   js:
-    - https://www.googletagmanager.com/gtag/js?id=G-FY2GLL103K
     - /js/ga.js
       # e.g.
       # - /js/custom-1.js
