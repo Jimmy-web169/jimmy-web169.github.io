@@ -43,6 +43,12 @@ menu:
   # tools: /tools               # || fa-solid fa-tools
   #about: /about               # || fa-solid fa-user-graduate
   # ......
+  # Language switch (submenu)
+  Language:
+    icon: fa-solid fa-globe
+    children:
+      - 中文: / || fa-solid fa-earth-asia
+      - English: /en/ || fa-solid fa-earth-americas
 
 
 # ---------------------------------------------------------------------------------------
@@ -349,6 +355,7 @@ inject:
   js:
     - /js/ga.js
     - /js/adsense.js
+    - /js/i18n-nav.js
       # e.g.
       # - /js/custom-1.js
       # - /js/custom-2.js

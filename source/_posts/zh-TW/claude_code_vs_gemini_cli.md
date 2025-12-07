@@ -3,7 +3,7 @@ title: Claude Code vs Gemini CLI — 你該換到 Gemini CLI 嗎？
 date: 2025-06-27 13:00:00 +0800
 tags: ["2025", "LLM", "Gemini CLI"]
 author: Jimmy
-lang: zh-tw
+lang: zh-TW
 home_cover: https://static.lets-open-terminal.com/img/posts/Gemini_CLI_Hero_Final.webp
 home_cover_height: 200
 post_cover: https://static.lets-open-terminal.com/img/posts/Gemini_CLI_Hero_Final.webp

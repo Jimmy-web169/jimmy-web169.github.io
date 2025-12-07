@@ -3,7 +3,7 @@ title: 如何用 Claude Code Hooks 寄送 Telegram 通知，再也不用等待 A
 date: 2025-07-05 15:00:00 +0800
 tags: ["2025", "LLM", "Claude Code"]
 author: Jimmy
-lang: zh-tw
+lang: zh-TW
 home_cover: https://static.lets-open-terminal.com/img/posts/claude_code_hooks_page_3.webp
 home_cover_height: 200
 post_cover: https://static.lets-open-terminal.com/img/posts/claude_code_hooks_page_3.webp
