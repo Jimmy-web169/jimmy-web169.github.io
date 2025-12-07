@@ -124,6 +124,7 @@
     }
 
     // Update ALL language switch links (identify by text content only)
+    // Also fix active class for language switcher
     document.querySelectorAll('a').forEach(link => {
       const text = link.textContent.trim();
 
@@ -131,8 +132,26 @@
       // Don't check href value since it may have been modified already
       if (text === '中文') {
         link.setAttribute('href', getSwitchLangPath('zh-TW'));
+        // Fix active class: add active for Chinese when on Chinese pages
+        const parentLi = link.closest('li.sub-menu-item');
+        if (parentLi) {
+          if (!isEnglish) {
+            parentLi.classList.add('active');
+          } else {
+            parentLi.classList.remove('active');
+          }
+        }
       } else if (text === 'English' || text === 'ENGLISH') {
         link.setAttribute('href', getSwitchLangPath('en'));
+        // Fix active class: add active for English when on English pages
+        const parentLi = link.closest('li.sub-menu-item');
+        if (parentLi) {
+          if (isEnglish) {
+            parentLi.classList.add('active');
+          } else {
+            parentLi.classList.remove('active');
+          }
+        }
       }
     });
   }
