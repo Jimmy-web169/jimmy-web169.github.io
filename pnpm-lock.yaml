@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  hexo-theme-keep@4.2.5:
+    hash: cc2472cabb56bd590cdf5d070c1f7c2772d9255c415d7cf7cc4ac335268c3e35
+    path: patches/hexo-theme-keep@4.2.5.patch
+
 importers:
 
   .:
@@ -43,7 +48,7 @@ importers:
         version: 3.0.0
       hexo-theme-keep:
         specifier: 4.2.5
-        version: 4.2.5
+        version: 4.2.5(patch_hash=cc2472cabb56bd590cdf5d070c1f7c2772d9255c415d7cf7cc4ac335268c3e35)
       hexo-wordcount:
         specifier: ^6.0.1
         version: 6.0.1
@@ -1464,7 +1469,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  hexo-theme-keep@4.2.5: {}
+  hexo-theme-keep@4.2.5(patch_hash=cc2472cabb56bd590cdf5d070c1f7c2772d9255c415d7cf7cc4ac335268c3e35): {}
 
   hexo-util@2.7.0:
     dependencies:

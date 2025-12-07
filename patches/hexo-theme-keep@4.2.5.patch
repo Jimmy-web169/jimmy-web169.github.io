@@ -1,0 +1,14 @@
+diff --git a/layout/_partial/comment/plugins/giscus.ejs b/layout/_partial/comment/plugins/giscus.ejs
+index 1234567..abcdefg 100644
+--- a/layout/_partial/comment/plugins/giscus.ejs
++++ b/layout/_partial/comment/plugins/giscus.ejs
+@@ -7,7 +7,8 @@ const {
+     category_id: giscus_category_id,
+     reactions_enabled: giscus_reactions_enabled,
+ } = theme?.comment?.giscus || {}
+-const giscus_language = config?.language || 'zh-CN'
++// Fix: Handle language array properly - use first language or default to zh-TW
++const giscus_language = Array.isArray(config?.language) ? config.language[0] : (config?.language || 'zh-TW')
+ %>
+ <% if (giscus_repo && giscus_repo_id && giscus_category && giscus_category_id) { %>
+     <div class="giscus-comments-container">

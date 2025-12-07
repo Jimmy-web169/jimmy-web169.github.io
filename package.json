@@ -11,6 +11,11 @@
   "hexo": {
     "version": "8.1.1"
   },
+  "pnpm": {
+    "patchedDependencies": {
+      "hexo-theme-keep@4.2.5": "patches/hexo-theme-keep@4.2.5.patch"
+    }
+  },
   "dependencies": {
     "hexo": "^8.0.0",
     "hexo-filter-mermaid-diagrams": "^1.0.5",
