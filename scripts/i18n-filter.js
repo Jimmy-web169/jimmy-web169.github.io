@@ -1,11 +1,49 @@
 /**
- * i18n filter for archives and tags
+ * i18n filter for archives, tags, and post navigation
  * Generates language-specific archive and tag pages
+ * Filters prev/next post navigation to same language
  */
 
 'use strict';
 
 const default_lang = 'zh-TW';
+
+// Helper function to get language from post
+function getPostLang(post) {
+  if (post.lang) return post.lang;
+  if (post.path) {
+    const match = post.path.match(/^(zh-TW|en)\//);
+    if (match) return match[1];
+  }
+  return default_lang;
+}
+
+// Register helper for same-language prev/next navigation
+hexo.extend.helper.register('get_same_lang_prev', function() {
+  const page = this.page;
+  if (!page) return null;
+
+  const currentLang = getPostLang(page);
+  const allPosts = this.site.posts.sort('-date').toArray();
+  const sameLangPosts = allPosts.filter(post => getPostLang(post) === currentLang);
+  const currentIndex = sameLangPosts.findIndex(post => post.path === page.path);
+
+  if (currentIndex === -1 || currentIndex === 0) return null;
+  return sameLangPosts[currentIndex - 1];
+});
+
+hexo.extend.helper.register('get_same_lang_next', function() {
+  const page = this.page;
+  if (!page) return null;
+
+  const currentLang = getPostLang(page);
+  const allPosts = this.site.posts.sort('-date').toArray();
+  const sameLangPosts = allPosts.filter(post => getPostLang(post) === currentLang);
+  const currentIndex = sameLangPosts.findIndex(post => post.path === page.path);
+
+  if (currentIndex === -1 || currentIndex >= sameLangPosts.length - 1) return null;
+  return sameLangPosts[currentIndex + 1];
+});
 
 // Override archive generator to filter by language
 hexo.extend.generator.register('i18n-archive', function(locals) {

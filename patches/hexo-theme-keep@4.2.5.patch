@@ -1,5 +1,57 @@
+diff --git a/layout/_page/post.ejs b/layout/_page/post.ejs
+index 5d122cfc887b47a7ad1bfc3897e19a072a7f8180..e67c17264a8d66b4874448b82e66dc38b85dbdc6 100644
+--- a/layout/_page/post.ejs
++++ b/layout/_page/post.ejs
+@@ -109,34 +109,38 @@ const is_code_block_unshrink = page?.code_block_shrink === false
+                     <%- partial('_partial/post/reward-author') %>
+                 <% } %>
+ 
+-                <% if (page.prev || page.next) { %>
++                <%
++                const sameLangPrev = get_same_lang_prev();
++                const sameLangNext = get_same_lang_next();
++                %>
++                <% if (sameLangPrev || sameLangNext) { %>
+                     <div class="post-nav border-box">
+-                        <% if (page.prev) { %>
++                        <% if (sameLangPrev) { %>
+                             <div class="prev-post">
+                                 <a class="prev"
+                                    rel="prev"
+-                                   href="<%- url_for(page.prev.path) %>"
+-                                   title="<%= page.prev.title %>"
++                                   href="<%- url_for(sameLangPrev.path) %>"
++                                   title="<%= sameLangPrev.title %>"
+                                 >
+                                     <span class="left arrow-icon flex-center">
+                                         <i class="fas fa-chevron-left"></i>
+                                     </span>
+                                     <span class="title flex-center">
+-                                        <span class="post-nav-title-item text-ellipsis"><%= page.prev.title %></span>
++                                        <span class="post-nav-title-item text-ellipsis"><%= sameLangPrev.title %></span>
+                                         <span class="post-nav-item"><%= __('prev_posts') %></span>
+                                     </span>
+                                 </a>
+                             </div>
+                         <% } %>
+-                        <% if (page.next) { %>
++                        <% if (sameLangNext) { %>
+                             <div class="next-post">
+                                 <a class="next"
+                                    rel="next"
+-                                   href="<%- url_for(page.next.path) %>"
+-                                   title="<%= page.next.title %>"
++                                   href="<%- url_for(sameLangNext.path) %>"
++                                   title="<%= sameLangNext.title %>"
+                                 >
+                                     <span class="title flex-center">
+-                                        <span class="post-nav-title-item text-ellipsis"><%= page.next.title %></span>
++                                        <span class="post-nav-title-item text-ellipsis"><%= sameLangNext.title %></span>
+                                         <span class="post-nav-item"><%= __('next_posts') %></span>
+                                     </span>
+                                     <span class="right arrow-icon flex-center">
 diff --git a/layout/_partial/comment/plugins/giscus.ejs b/layout/_partial/comment/plugins/giscus.ejs
-index 1234567..abcdefg 100644
+index 891c704fa5c5e6f54d65acfa06ad7fe786c2adab..28d3fbfebe720e091c754648d0706804aab3a360 100644
 --- a/layout/_partial/comment/plugins/giscus.ejs
 +++ b/layout/_partial/comment/plugins/giscus.ejs
 @@ -7,7 +7,8 @@ const {
