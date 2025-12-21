@@ -4,6 +4,10 @@ date: 2025-12-14 15:00:00 +0800
 tags: ["2025", "LLM", "Claude Code"]
 author: Jimmy
 lang: en
+home_cover: https://static.lets-open-terminal.com/img/posts/agent_skill.webp
+home_cover_height: 200
+post_cover: https://static.lets-open-terminal.com/img/posts/agent_skill.webp
+post_cover_height: 200
 ---
 
 # The Breakneck Pace of AI Evolution
