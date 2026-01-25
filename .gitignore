@@ -3,3 +3,10 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+.claude/
+User/
+CLAUDE.md
+.mcp.json
+.vscode/
+img/
+scripts/
