@@ -2,6 +2,7 @@
 layout: post
 title: "How to Send Telegram Notifications with Claude Code Hooks — Never Wait for AI to Finish Again!"
 date: 2025-07-05 15:00:00 +0800
+tags: [Claude Code]
 ---
 
 # Introduction to Claude Code Hooks

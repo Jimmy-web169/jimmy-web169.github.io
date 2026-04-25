@@ -2,6 +2,7 @@
 layout: post
 title: "What Are Claude Code's Subagents and Skills?"
 date: 2025-12-14 15:00:00 +0800
+tags: [Claude Code]
 ---
 
 # The Breakneck Pace of AI Evolution

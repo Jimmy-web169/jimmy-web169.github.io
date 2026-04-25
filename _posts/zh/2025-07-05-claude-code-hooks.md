@@ -2,6 +2,7 @@
 layout: post
 title: "如何用 Claude Code Hooks 寄送 Telegram 通知，再也不用等待 AI 完成任務！"
 date: 2025-07-05 15:00:00 +0800
+tags: [Claude Code]
 ---
 
 # Claude Code Hooks 介紹

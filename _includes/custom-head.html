@@ -220,6 +220,45 @@
     border-radius: 2px;
   }
 
+  /* ===== Tags Page ===== */
+  .tag-index {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 0 32px;
+  }
+
+  .tag-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    border: 1px solid #d8d8d8;
+    border-radius: 8px;
+    color: #333;
+    text-decoration: none;
+    line-height: 1.2;
+  }
+
+  .tag-pill:hover {
+    border-color: #2a7ae2;
+    text-decoration: none;
+  }
+
+  .tag-pill span {
+    color: #828282;
+    font-size: 12px;
+  }
+
+  .tag-section {
+    margin: 0 0 36px;
+  }
+
+  .tag-section h2 {
+    padding-bottom: 6px;
+    border-bottom: 1px solid #e8e8e8;
+  }
+
   /* ===== Dark Mode Styles ===== */
   html[data-theme="dark"] body,
   html[data-theme="dark"] {
@@ -347,6 +386,23 @@
   html[data-theme="dark"] .search-result-title mark {
     background-color: #5c4d00 !important;
     color: #ffd700 !important;
+  }
+
+  html[data-theme="dark"] .tag-pill {
+    border-color: #3a3a3a !important;
+    color: #e0e0e0 !important;
+  }
+
+  html[data-theme="dark"] .tag-pill:hover {
+    border-color: #90caf9 !important;
+  }
+
+  html[data-theme="dark"] .tag-pill span {
+    color: #aaa !important;
+  }
+
+  html[data-theme="dark"] .tag-section h2 {
+    border-bottom-color: #3a3a3a !important;
   }
 
   html[data-theme="dark"] p,

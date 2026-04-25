@@ -2,6 +2,7 @@
 layout: post
 title: "Claude Code vs Gemini CLI — 你該換到 Gemini CLI 嗎？"
 date: 2025-06-27 13:00:00 +0800
+tags: [Claude Code, Gemini CLI]
 ---
 
 ## Google CLI 的發佈
