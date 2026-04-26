@@ -67,12 +67,12 @@ I love Andrej Karpathy's framing of LLM applications as an operating system.
 
 It inspired me to map the relationship between LLMs and AI Agents onto computer hardware:
 
-![AI_AGENT_COMPUTER_SYSTEM](https://static.jimmyblog.site/2026-04-26-what-is-ai-agents/AI_AGENT_COMPUTER_SYSTEM.webp)
+![AI_AGENT_COMPUTER_SYSTEM](https://static.jimmyblog.site/2026-04-26-what-is-ai-agents/AI_AGENT_COMPUTER_SYSTEM_2.webp)
 
 | AI Concept | Hardware | Why |
 |------------|----------|-----|
 | LLM | CPU | Core computation — reasoning, language understanding |
-| Agent Framework | Motherboard | Ties everything together, coordinates signal flow |
+| HARNESS | Motherboard | Ties everything together, coordinates signal flow |
 | Tools | PCIe Slots | External capabilities (search, code execution, etc.) |
 | Memory | RAM | Short-term memory, current task context |
 | Vector DB / DB | Hard Drive | Long-term storage, retrieved when needed |

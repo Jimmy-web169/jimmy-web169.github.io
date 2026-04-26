@@ -73,12 +73,12 @@ tags: [AI Agents]
 
 這也啟發我用這個框架去解釋LLM 和 AI Agent 的關係：
 
-![AI_AGENT_COMPUTER_SYSTEM](https://static.jimmyblog.site/2026-04-26-what-is-ai-agents/AI_AGENT_COMPUTER_SYSTEM.webp)
+![AI_AGENT_COMPUTER_SYSTEM](https://static.jimmyblog.site/2026-04-26-what-is-ai-agents/AI_AGENT_COMPUTER_SYSTEM_2.webp)
 
 | AI 概念 | 零件 | 原因 |
 |---------|---------|------|
 | LLM | CPU | 核心運算、推理、理解語言的地方 |
-| Agent 框架 | 主機板 | 把所有零件串在一起，協調各種訊號流動 |
+| HARNESS | 主機板 | 把所有零件串在一起，協調各種訊號流動 |
 | Tools | 擴充插槽 / PCIe | 讓 Agent 能接上外部能力（搜尋、執行程式等）|
 | Memory | RAM | 短期記憶，處理當前任務的上下文 |
 | Vector DB / DB| 硬碟 | 長期記憶，需要時再讀取 |
