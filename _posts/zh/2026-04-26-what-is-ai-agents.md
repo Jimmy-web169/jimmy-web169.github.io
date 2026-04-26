@@ -56,13 +56,7 @@ tags: [AI Agents]
 
 設計 AI Agent 時，我認為同樣存在一個類似的 Iron Triangle，只是三個頂點換成了：**Accuracy（準確性）、Latency（延遲）、Cost（成本）**。
 
-![AI_AGENT_IRON_TRIANGLE](https://static.jimmyblog.site/2026-04-26-what-is-ai-agents/AI_AGENT_IRON_TRIANGLE.webp)
-
-| 組合 | 代價 |
-|------|------|
-| 快 + 準（低延遲、高準確）|  貴（需要更強的模型與更多運算）|
-| 快 + 便宜（低延遲、低成本）| 不準（小模型、少思考步驟）|
-| 準 + 便宜（高準確、低成本）|  慢（多次驗證、反覆迭代）|
+![AI_AGENT_IRON_TRIANGLE](https://static.jimmyblog.site/2026-04-26-what-is-ai-agents/AI_AGENT_IRON_TRIANGLE_2.webp)
 
 三者無法兼得，設計前必須先釐清你最在乎哪個維度。
 

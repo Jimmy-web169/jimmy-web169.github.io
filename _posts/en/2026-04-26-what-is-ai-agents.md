@@ -49,13 +49,7 @@ No pattern is inherently better than another; it's all about fit. And figuring o
 
 In Agent design, I think the same Iron Triangle applies, just with three different vertices: **Accuracy, Latency, and Cost**.
 
-![AI_AGENT_IRON_TRIANGLE](https://static.jimmyblog.site/2026-04-26-what-is-ai-agents/AI_AGENT_IRON_TRIANGLE.webp)
-
-| Trade-off | The Price |
-|-----------|-----------|
-| Fast + Accurate (low latency, high accuracy) | Expensive — stronger models, more compute |
-| Fast + Cheap (low latency, low cost) | Inaccurate — smaller models, fewer reasoning steps |
-| Accurate + Cheap (high accuracy, low cost) | Slow — multiple passes, repeated iteration |
+![AI_AGENT_IRON_TRIANGLE](https://static.jimmyblog.site/2026-04-26-what-is-ai-agents/AI_AGENT_IRON_TRIANGLE_2.webp)
 
 You can't have all three. Know which dimension matters most before you start designing.
 
