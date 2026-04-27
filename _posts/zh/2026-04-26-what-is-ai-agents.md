@@ -73,7 +73,7 @@ tags: [AI Agents]
 
 這也啟發我用這個框架去解釋LLM 和 AI Agent 的關係：
 
-![AI_AGENT_COMPUTER_SYSTEM](https://static.jimmyblog.site/2026-04-26-what-is-ai-agents/AI_AGENT_COMPUTER_SYSTEM_2.webp)
+![AI_AGENT_COMPUTER_SYSTEM](https://static.jimmyblog.site/2026-04-26-what-is-ai-agents/AI_AGENT_COMPUTER_SYSTEM_3.webp)
 
 | AI 概念 | 零件 | 原因 |
 |---------|---------|------|
